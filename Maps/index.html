@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Map Layout</title>
+
+    <!-- Bootstrap + Fontawesome CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+    <body>
+        <div class="navbar-minimalist" style=" position: sticky;">
+        </div>
+
+      <div class="main-container">
+        <div class="card-container">
+          <div class="flip3D">
+              <div class="card front" style="background-color: red">
+                <img class="card-user avatar avatar-large" src="images/seb.jpeg">
+
+                  <div class="card-body">
+                    <div class="card-picture" style="background: url('images/berlin.jpg');">
+                      <img class="card-user avatar avatar-large" src="images/seb.jpeg">
+                      <a class="card-link" href="#" ></a>
+                    </div>
+                        <div class="card-description-flex">
+                          <p>Rio de Janeiro</p>
+                          <h2>R$ 40.00</h2>
+                        </div>
+                        <div class="card-description-flex">
+                          <p>Sao Paulo</p>
+                          <p>20/12/2018</p>
+                      </div>
+                   </div>
+
+
+              </div>
+              <div class="card back">Box 1 - Back
+
+              </div>
+          </div>
+          <div class="flip3D">
+            <div class="card front" style="background-image: url(images/berlin.jpg)">Rio</div>
+            <div class="card back">Box 2 - Back</div>
+          </div>
+          <div class="flip3D">
+            <div class="card front" style="background-image: url(images/shanghai.jpg)">Rio</div>
+            <div class="card back">Box 3 - Back</div>
+          </div>
+          <div class="flip3D">
+            <div class="card front" style="background-image: url(images/barcelona.jpg)">Rio</div>
+            <div class="card back">Box 1 - Back</div>
+          </div>
+          <div class="flip3D">
+            <div class="card front" style="background-image: url(images/berlin.jpg)">Rio</div>
+            <div class="card back">Box 2 - Back</div>
+          </div>
+          <div class="flip3D">
+            <div class="card front" style="background-image: url(images/Rio.jpg)">Rio</div>
+            <div class="card back">Box 3 - Back</div>
+          </div>
+<!--           <div class="flip3D">
+            <div class="card front" style="background-image: url(images/barcelona.jpg)">Rio</div>
+            <div class="card back">Box 1 - Back</div>
+          </div>
+          <div class="flip3D">
+            <div class="card front" style="background-image: url(images/berlin.jpg)">Rio</div>
+            <div class="card back">Box 2 - Back</div>
+          </div>
+          <div class="flip3D">
+            <div class="card front" style="background-image: url(images/Rio.jpg)">Rio</div>
+            <div class="card back">Box 3 - Back</div>
+          </div>
+          <div class="flip3D">
+            <div class="card front" style="background-image: url(images/barcelona.jpg)">Rio</div>
+            <div class="card back">Box 1 - Back</div>
+          </div>
+          <div class="flip3D">
+            <div class="card front" style="background-image: url(images/berlin.jpg)">Rio</div>
+            <div class="card back">Box 2 - Back</div>
+          </div>
+          <div class="flip3D">
+            <div class="card front" style="background-image: url(images/Rio.jpg)">Rio</div>
+            <div class="card back">Box 3 - Back</div>
+          </div> -->
+      </div>
+
+        <div id="map"></div>
+
+        <!-- Gmaps js: building the map -->
+        </div>
+        <script>
+          function initMap() {
+            // Create a map object and specify the DOM element for display.
+            var map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 52.5206, lng: 13.4098},
+              scrollwheel: false,
+              zoom: 8
+            });
+          }
+        </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Gmaps JavaScript -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzER7O10ZOUp7FloJzMe2r8X1GIQhgt7Q&callback=initMap">
+        </script>
+  </body>
+</html>

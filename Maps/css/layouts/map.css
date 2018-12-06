@@ -1,0 +1,46 @@
+/* TODO: design your flexbox layout with a sticky map */
+.main-container {
+  display: flex;
+}
+
+.card-container{
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-container .card {
+  flex: 0 1 100%;
+}
+
+@media (min-width: 760px) {
+  .card-container .card{
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+
+@media (min-width: 880px) {
+  .card-container .card{
+    flex: 0 1 calc(33.33% - 20px);
+  }
+}
+
+/*@media (max-width: 700px) {
+  .card-container .card{
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 400px) {
+  .card-container .card{
+    flex: 0 0 calc(100% - 20px);
+  }
+}*/
+
+/* We just give you a Gmaps with random width/height */
+#map {
+  flex: 0 0 450px;
+  height: 100vh;
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0 !important;
+}
